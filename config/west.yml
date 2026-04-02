@@ -1,21 +1,15 @@
-manifest:
-  defaults:
-    revision: v0.3
-
-  remotes:
+ remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: totem
-      url-base: https://github.com/GEIGEIGEIST
-
+    - name: bildermankawasaki
+      url-base: https://github.com/bildermankawasaki
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: v0.3 # pinned to v0.3 because main has been updated to use zephyr 4.1 which includes breaking changes
       import: app/west.yml
-
-    - name: totem
-      remote: totem
+    - name: zmk-keyboard-totem
+      remote: bildermankawasaki
       revision: main
-
   self:
     path: config
