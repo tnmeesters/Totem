@@ -1,4 +1,4 @@
-/ {
+/ { 
     keymap {
         default_layer {
             bindings = <
